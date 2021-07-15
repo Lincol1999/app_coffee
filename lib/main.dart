@@ -1,8 +1,18 @@
 import 'package:app_coffe/bottom_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
+
+  //Puede utilizar la clase para cambiar el color de la barra de estado y la barra de navegación.
+  //SystemChrome
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(
+      systemNavigationBarColor: Color(0xff0c0f14),
+      statusBarColor: Color(0xff0c0f14),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

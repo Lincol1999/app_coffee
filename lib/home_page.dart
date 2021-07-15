@@ -1,5 +1,7 @@
-import 'package:app_coffe/widgets/single_item.dart';
 import 'package:flutter/material.dart';
+
+import 'package:app_coffe/widgets/single_item.dart';
+import 'package:app_coffe/widgets/special_coffe.dart';
 
 import 'package:app_coffe/widgets/coffee_category.dart';
 export 'package:app_coffe/home_page.dart';
@@ -130,6 +132,7 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   children: [
                     buildSingleItem(
+                      context: context,
                       image: 'assets/coffee1.jpeg',
                       title: 'Cappuccino',
                       subtitle: 'With oat Milk',
@@ -137,6 +140,7 @@ class HomePage extends StatelessWidget {
                       rating: 4.5,
                     ),
                     buildSingleItem(
+                      context: context,
                       image: 'assets/coffee8.jpeg',
                       title: 'Cappuccino',
                       subtitle: 'With oat Milk',
@@ -144,6 +148,7 @@ class HomePage extends StatelessWidget {
                       rating: 4.5,
                     ),
                     buildSingleItem(
+                      context: context,
                       image: 'assets/coffee4.jpeg',
                       title: 'Cappuccino',
                       subtitle: 'With oat Milk',
@@ -151,6 +156,7 @@ class HomePage extends StatelessWidget {
                       rating: 4.5,
                     ),
                     buildSingleItem(
+                      context: context,
                       image: 'assets/coffee5.jpeg',
                       title: 'Cappuccino',
                       subtitle: 'With oat Milk',
@@ -158,6 +164,7 @@ class HomePage extends StatelessWidget {
                       rating: 4.5,
                     ),
                     buildSingleItem(
+                      context: context,
                       image: 'assets/coffee6.jpeg',
                       title: 'Cappuccino',
                       subtitle: 'With oat Milk',
@@ -165,6 +172,7 @@ class HomePage extends StatelessWidget {
                       rating: 4.5,
                     ),
                     buildSingleItem(
+                      context: context,
                       image: 'assets/coffee7.jpeg',
                       title: 'Cappuccino',
                       subtitle: 'With oat Milk',
@@ -174,6 +182,19 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              Padding(
+                padding: EdgeInsets.only(left: 5),
+                child: ListTile(
+                  leading: Text(
+                    'Special for you',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              specialCoffe(),
             ],
           ),
         ),
